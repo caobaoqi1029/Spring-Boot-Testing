@@ -98,7 +98,7 @@ public class CustomerService {
     private void validateCustomerByEmail(String email) {
         Optional<Customer> customerByEmail = customerRepository.findByEmail(email);
         if (customerByEmail.isPresent()) {
-            throw new CustomerEmailUnavailableException("The email \"" + email + "\" unavailable to update");
+            throw new CustomerEmailUnavailableException("The email " + email + " unavailable.");
         }
     }
 
